@@ -1,0 +1,42 @@
+swagger: "2.0"
+info:
+  description: "Application"
+  version: "1.0.0"
+  title: "Documentação Application"
+host: "localhost:3000"
+basePath: "/"
+tags:
+- name: "/"
+  description: "Testa acesso."
+schemes:
+- "http"
+paths:
+  /:
+    get:
+      tags:
+      - "/"
+      summary: "Mostra informações sobre a api. Pode ser utilizado para checar se a mesma possui conectividade."
+      description: ""
+      operationId: "test"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "Requisição bem sucedida"
+          schema:
+            $ref: "#/definitions/index"
+        default:
+          description: "Mensagen enviada"
+definitions:
+  index:
+    type: "object"
+    properties:
+      apiName:
+        type: "string"
+        description: "Nome da aplicação."
+      description:
+        type: "string"
+        description: "Descrição da aplicação."
+      version: 
+        type: "string"
+        description: "Versão da aplicação."
