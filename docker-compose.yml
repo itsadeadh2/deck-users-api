@@ -10,7 +10,7 @@ services:
   api:
     container_name: users_api
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
       context: .
     ports:
       - 3000:3000
